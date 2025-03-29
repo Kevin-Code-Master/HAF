@@ -25,89 +25,162 @@
             <div id="left_panel">
                 <fieldset>
                     <legend>Patient Information</legend><br>
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name"><br><br>
-                    <label for="dob">D.o.B:</label>
-                    <input type="date" id="dob" name="dob"><br><br>
-                    <label for="age">Age:</label>
-                    <input type="text" name="age" id="age"><br><br>
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender">
-                        <option value="select"></option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select><br><br>
-                    <label for="identification">National ID/Passport No:</label>
-                    <input type="text" name="identification" id="identification"><br><br>
-                    <label for="contact">Phone No:</label>
-                    <input type="text" name="contact" id="contact"><br><br>
-                    <label for="address">Address:</label>
-                    <input type="text" name="address" id="address"><br><br>
-                    <label for="kin">Next of kin name:</label>
-                    <input type="text" name="kin" id="kin"><br><br>
-                    <label for="kin-contact">Next of kin Phone No:</label>
-                    <input type="text" name="kin-contact" id="kin-contact"><br><br>
-                    <label for="relationship">Relationship to Patient:</label>
-                    <input type="text" name="relationship" id="relationship"><br><br>
+                    <table>
+                        <tr>
+                            <td><label for="name">Full Name:</label></td>
+                            <td><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="dob">D.o.B:</label></td>
+                            <td><input type="date" id="dob" name="dob"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="age">Age:</label></td>
+                            <td><span id="age">________</span></td>
+                        </tr>
+                        <tr>
+                            <td> <label for="gender">Gender:</label></td>
+                            <td> 
+                                <select name="gender" id="gender">
+                                    <option value="select"></option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="identification">National ID/Passport No:</label></td>
+                            <td><input type="text" name="identification" id="identification"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="contact">Phone No:</label></td>
+                            <td> <input type="text" name="contact" id="contact"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="address">Address:</label></td>
+                            <td><input type="text" name="address" id="address"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="kin">Next of kin name:</label></td>
+                            <td><input type="text" name="kin" id="kin"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="kin-contact">Next of kin Phone No:</label></td>
+                            <td><input type="text" name="kin-contact" id="kin-contact"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="relationship">Relationship to Patient:</label></td>
+                            <td><input type="text" name="relationship" id="relationship"></td>
+                        </tr>
+                    </table>
                 </fieldset><br>
                 <fieldset>
                     <legend>Clinical Information</legend><br>
-                    <label for="complaint">Chief Complaint:</label>
-                    <textarea name="complaint" id="complaint"></textarea><br><br>
-                    <label for="present-illness-history">History of Present Illness:</label>
-                    <textarea name="present-illness-history" id="present-illness-history"></textarea><br><br>
-                    <label for="past-medical-history">Past Medical History:</label>
-                    <select name="past-medical-history" id="past-medical-history">
-                        <option value=""></option>
-                        <option value="chronic">Chronic Illness</option>
-                        <option value="surgeries">Surgeries</option>
-                        <option value="hospitalization">Hospitalization</option>
-                        <option value="allergies">Allergies</option>
-                    </select><br><br>
-                    <label for="medication">Current Medication:</label>
-                    <textarea name="medication" id="medication"></textarea><br><br>
+                    <table>
+                        <tr>
+                            <td><label for="complaint">Chief Complaint:</label></td>
+                            <td><textarea name="complaint" id="complaint"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="present-illness-history">History of Present Illness:</label></td>
+                            <td><textarea name="present-illness-history" id="present-illness-history"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="past-medical-history">Past Medical History:</label></td>
+                            <td>
+                                <select name="past-medical-history" id="past-medical-history">
+                                    <option value=""></option>
+                                    <option value="chronic">Chronic Illness</option>
+                                    <option value="surgeries">Surgeries</option>
+                                    <option value="hospitalization">Hospitalization</option>
+                                    <option value="allergies">Allergies</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="medication">Current Medication:</label></td>
+                            <td><textarea name="medication" id="medication"></textarea></td>
+                        </tr>
+                        <tr></tr>
+                    </table>
                 </fieldset><br><br>
             </div>
             <div id="right_panel">
                 <fieldset>
                     <legend>Vital Signs</legend><br>
-                    <label for="temperature">Temperature (°C):</label>
-                    <input type="text" name="temperature" id="temperature"><br><br>
-                    <label for="bp">Blood Pressure (mmHg):</label>
-                    <input type="text" name="bp" id="bp"><br><br>
-                    <label for="pr">Pulse Rate:</label>
-                    <input type="text" name="pr" id="pr"><br><br>
-                    <label for="rr">Respiratory Rate:</label>
-                    <input type="text" name="rr" id="rr"><br><br>
-                    <label for="oxygen">Oxygen Saturation (%):</label>
-                    <input type="text" name="oxygen" id="oxygen"><br><br>
-                    <label for="weight">Weight (Kgs):</label>
-                    <input type="text" name="weight" id="weight"><br><br>
-                    <label for="height">Height (Cm):</label>
-                    <input type="text" name="height" id="height"><br><br>
-                    <label for="bmi">BMI:</label>
-                    <input type="text" name="bmi" id="bmi"><br><br>
-                    <label for="examination">Physical Examination Findings:</label>
-                    <textarea name="examination" id="examination"></textarea>
+                    <table>
+                        <tr>
+                            <td><label for="temperature">Temperature (°C):</label></td>
+                            <td><input type="text" name="temperature" id="temperature"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bp">Blood Pressure (mmHg):</label></td>
+                            <td><input type="text" name="bp" id="bp"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pr">Pulse Rate:</label></td>
+                            <td><input type="text" name="pr" id="pr"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="rr">Respiratory Rate:</label></td>
+                            <td><input type="text" name="rr" id="rr"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="oxygen">Oxygen Saturation (%):</label></td>
+                            <td><input type="text" name="oxygen" id="oxygen"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="weight">Weight (Kgs):</label></td>
+                            <td><input type="text" name="weight" id="weight"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="height">Height (Cm):</label></td>
+                            <td><input type="text" name="height" id="height"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bmi">BMI:</label></td>
+                            <td><input type="text" name="bmi" id="bmi"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="examination">Physical Examination Findings:</label></td>
+                            <td><textarea name="examination" id="examination"></textarea></td>
+                        </tr>
+                    </table>
                 </fieldset><br>
                 <fieldset>
                     <legend>Diagnosis</legend>
-                    <label for="provisional">Provisional Diagnosis:</label>
-                    <textarea name="provisional" id="provisional"></textarea><br><br>
-                    <label for="investigations">Investigations Requested:</label>
-                    <textarea name="investigations" id="investigations"></textarea><br><br>
-                    <label for="treatment-plan">Treatment Plan:</label>
-                    <textarea name="treatment-plan" id="treatment-plan"></textarea><br><br>
-                    <label for="follow-up">Follow-up Instructions:</label>
-                    <textarea name="follow-up" id="follow-up"></textarea><br><br>
+                    <table>
+                        <tr>
+                            <td><label for="provisional">Provisional Diagnosis:</label></td>
+                            <td><textarea name="provisional" id="provisional"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="investigations">Investigations Requested:</label></td>
+                            <td><textarea name="investigations" id="investigations"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="treatment-plan">Treatment Plan:</label></td>
+                            <td><textarea name="treatment-plan" id="treatment-plan"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label for="follow-up">Follow-up Instructions:</label></td>
+                            <td><textarea name="follow-up" id="follow-up"></textarea></td>
+                        </tr>
+                    </table>
                 </fieldset>
                 <fieldset>
                     <legend>Official Use Only:</legend><br>
-                    <label for="clinician">Attending Clinician Name:</label>
-                    <input type="text" name="clinician" id="clinician"><br><br>
-                    <label for="designation">Designation:</label>
-                    <input type="text" name="designation" id="designation">
+                    <table>
+                        <tr>
+                            <td><label for="clinician">Attending Clinician Name:</label></td>
+                            <td><input type="text" name="clinician" id="clinician"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="designation">Designation:</label></td>
+                            <td><input type="text" name="designation" id="designation"></td>
+                        </tr>
+                    </table>
                 </fieldset>
             </div>    
           </form>

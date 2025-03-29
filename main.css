@@ -19,10 +19,15 @@ body{
     align-items: center;
 }
 #header-container {
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+#header-container input {
+    width: 20vh;
+    height: 3vh;
 }
 .container {
     width: 100%;
@@ -42,30 +47,79 @@ body{
 #left_panel {
     width: 49.5%;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
 }
 #right_panel {
     width: 49.5%;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}
+fieldset {
+    width: 100%;
+    height: auto;
+}
+legend{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2vh;
 }
 
 /* All inputs and text areas */
-input, textarea {
+input {
     outline: none;
-    border: 0;
+    border: 1px solid grey;
     border-radius: 5px;
-    width: 20%;
+    width: 100%;
+    height: inherit;
+    padding: 1vh;
+}
+textarea {
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
     height: 3vh;
     padding: 1vh;
 }
 /* For all the select */
 select {
-    width: 20%;
+    width: 100%;
     height: 3vh;
     outline: 0;
     border-radius: 5px;
-    border: 0;
+    border: 1px solid grey;
 }
 /* Select on hover */
 select:hover{
     cursor: pointer;
+}
+/* table */
+table{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    tr{
+        width: 80vh;
+        height: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 1vh;
+    }
+    td {
+        width: 50%;
+        height: inherit;
+        
+    }
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
 }
