@@ -1,31 +1,41 @@
-
-
-const dob = document.getElementById("dob").value;
+//Calculate the age of the patient
 
 function calculateAge() {
-    
-    let patientDob = new Date(dob);
-    let today = new Date();
-    let patientAge = today.getFullYear() - patientDob.getFullYear();
+    let dobInput = document.getElementById("dob").value;
+    let ageInput = document.getElementById("age");
 
-    let monthDiff = today.getMonth() - patientDob.getMonth();
-    let dayDiff = today.getDate() - patientDob.getDate();
+    if (dobInput) {
+        let today = new Date();
+        let dob = new Date (dobInput);
 
-    // adjust age if birthday has not occured yet this year
+        let age = today.getFullYear() - dob.getFullYear();
+        let monthDiff = today.getMonth() - dob.getMonth();
+        let dayDiff = today.getDate() - dob.getDate();
 
-    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-        patientAge--;
-    }
-    return patientAge;
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age --;
+        }
+        ageInput.value = `${age} years`;
+    };
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-    let dobField = document.getElementById("dob");
-    let ageSpan = document.getElementById("age");
+document.getElementById("dob").addEventListener("input", calculateAge);
 
-    if (dobField) {
-        dobField.addEventListener("change", () => {
-            ageSpan.textContent = calculateAge();
-        });
-    };
-});
+//Calculate BMI
+
+function calculateBMI() {
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value)/100;//convert height to meters
+  
+
+    if (weight > 0 && height > 0) {
+        //calculate BMI
+        let bmi = (weight/(height**2)).toFixed(2);
+        //display BMI value in the BMI input
+        document.getElementById("bmi").value = bmi;
+    }else{
+        document.getElementById("bmi").value = "";
+    }
+};
+document.getElementById("weight").addEventListener("input",calculateBMI);
+document.getElementById("height").addEventListener("input",calculateBMI);

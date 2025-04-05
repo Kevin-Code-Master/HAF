@@ -32,11 +32,11 @@
                         </tr>
                         <tr>
                             <td><label for="dob">D.o.B:</label></td>
-                            <td><input type="date" id="dob" name="dob"></td>
+                            <td><input type="date" id="dob" name="dob" placeholder="Select date"></td>
                         </tr>
                         <tr>
                             <td><label for="age">Age:</label></td>
-                            <td><span id="age">________</span></td>
+                            <td><input type="text" id="age" name="age" readonly></td>
                         </tr>
                         <tr>
                             <td> <label for="gender">Gender:</label></td>
@@ -104,7 +104,7 @@
                         </tr>
                         <tr></tr>
                     </table>
-                </fieldset><br><br>
+                </fieldset>
             </div>
             <div id="right_panel">
                 <fieldset>
@@ -132,22 +132,22 @@
                         </tr>
                         <tr>
                             <td><label for="weight">Weight (Kgs):</label></td>
-                            <td><input type="text" name="weight" id="weight"></td>
+                            <td><input type="number" name="weight" id="weight"></td>
                         </tr>
                         <tr>
                             <td><label for="height">Height (Cm):</label></td>
-                            <td><input type="text" name="height" id="height"></td>
+                            <td><input type="number" name="height" id="height" placeholder="Enter height in cm"></td>
                         </tr>
                         <tr>
                             <td><label for="bmi">BMI:</label></td>
-                            <td><input type="text" name="bmi" id="bmi"></td>
+                            <td><input type="text" id="bmi" name="bmi" readonly></td>
                         </tr>
                         <tr>
                             <td><label for="examination">Physical Examination Findings:</label></td>
                             <td><textarea name="examination" id="examination"></textarea></td>
                         </tr>
                     </table>
-                </fieldset><br>
+                </fieldset>
                 <fieldset>
                     <legend>Diagnosis</legend>
                     <table>
@@ -170,7 +170,7 @@
                     </table>
                 </fieldset>
                 <fieldset>
-                    <legend>Official Use Only:</legend><br>
+                    <legend>Official Use Only:</legend>
                     <table>
                         <tr>
                             <td><label for="clinician">Attending Clinician Name:</label></td>
@@ -181,8 +181,10 @@
                             <td><input type="text" name="designation" id="designation"></td>
                         </tr>
                     </table>
-                </fieldset>
+                </fieldset> <br>
+                <button type="submit" id="submit">SUBMIT</button>
             </div>    
+            
           </form>
     </div>
 </body>
