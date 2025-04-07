@@ -27,8 +27,12 @@
                     <legend>Patient Information</legend><br>
                     <table>
                         <tr>
-                            <td><label for="name">Full Name:</label></td>
-                            <td><input type="text" id="name" name="name"></td>
+                            <td><label for="fname">First Name:</label></td>
+                            <td><input type="text" id="fname" name="fname"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name:</label></td>
+                            <td><input type="text" id="lname" name="lname"></td>
                         </tr>
                         <tr>
                             <td><label for="dob">D.o.B:</label></td>
@@ -71,7 +75,15 @@
                         </tr>
                         <tr>
                             <td><label for="relationship">Relationship to Patient:</label></td>
-                            <td><input type="text" name="relationship" id="relationship"></td>
+                            <td>
+                                <select id="relationship" name="relationship">
+                                    <option value="">Select</option>
+                                    <option value="self">Self</option>
+                                    <option value="spouse">Spouse</option>
+                                    <option value="child">Child</option>
+                                    <option value="other">Other Relative</option>
+                                </select>
+                            </td>
                         </tr>
                     </table>
                 </fieldset><br>
@@ -90,7 +102,8 @@
                             <td><label for="past-medical-history">Past Medical History:</label></td>
                             <td>
                                 <select name="past-medical-history" id="past-medical-history">
-                                    <option value=""></option>
+                                    <option value="">Select</option>
+                                    <option value="none">None</option>
                                     <option value="chronic">Chronic Illness</option>
                                     <option value="surgeries">Surgeries</option>
                                     <option value="hospitalization">Hospitalization</option>
@@ -112,23 +125,53 @@
                     <table>
                         <tr>
                             <td><label for="temperature">Temperature (°C):</label></td>
-                            <td><input type="text" name="temperature" id="temperature"></td>
+                            <td><input type="number" name="temperature" id="temperature"></td>
                         </tr>
                         <tr>
-                            <td><label for="bp">Blood Pressure (mmHg):</label></td>
-                            <td><input type="text" name="bp" id="bp"></td>
+                            <td>
+                                <label for="bp">Blood Pressure (mmHg):</label>
+                            </td>
+                            <td><br>
+                                <table id="bp_container">
+                                    <tr>
+                                        <td>
+                                            <label for="systole">Systolic Reading:</label>
+                                        </td>
+                                        <td>
+                                            <input type="number" name="systole" id="systole" placeholder="Systolic (top) e.g 120">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="diastole">Diastolic Reading:</label>
+                                        </td>
+                                        <td>
+                                            <input type="number" name="diastole" id="diastole" placeholder="Diastolic (bottom) e.g 80">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="bp">Blood Pressure:</label>
+                                        </td>
+                                        <td> 
+                                            <input type="text" name="bp" id="bp" placeholder="Blood Pressure (BP)" readonly>
+                                            <input type="text" name="bp" id="interpretation" class="interpretation" readonly>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                         <tr>
                             <td><label for="pr">Pulse Rate:</label></td>
-                            <td><input type="text" name="pr" id="pr"></td>
+                            <td><input type="number" name="pr" id="pr"></td>
                         </tr>
                         <tr>
                             <td><label for="rr">Respiratory Rate:</label></td>
-                            <td><input type="text" name="rr" id="rr"></td>
+                            <td><input type="number" name="rr" id="rr"></td>
                         </tr>
                         <tr>
                             <td><label for="oxygen">Oxygen Saturation (%):</label></td>
-                            <td><input type="text" name="oxygen" id="oxygen"></td>
+                            <td><input type="number" name="oxygen" id="oxygen"></td>
                         </tr>
                         <tr>
                             <td><label for="weight">Weight (Kgs):</label></td>
