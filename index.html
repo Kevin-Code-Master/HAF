@@ -25,7 +25,7 @@
             <div id="left_panel">
                 <fieldset>
                     <legend>Patient Information</legend><br>
-                    <table>
+                    <table id="patient_info">
                         <tr>
                             <td><label for="fname">First Name:</label></td>
                             <td><input type="text" id="fname" name="fname"></td>
@@ -124,12 +124,12 @@
                     <legend>Vital Signs</legend><br>
                     <table>
                         <tr>
-                            <td><label for="temperature">Temperature (°C):</label></td>
+                            <td><label for="temperature">Temperature (°C)🌡:</label></td>
                             <td><input type="number" name="temperature" id="temperature"></td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="bp">Blood Pressure (mmHg):</label>
+                                <label for="bp">Blood Pressure (mmHg)🩸:</label>
                             </td>
                             <td><br>
                                 <table id="bp_container">
@@ -155,23 +155,23 @@
                                         </td>
                                         <td> 
                                             <input type="text" name="bp" id="bp" placeholder="Blood Pressure (BP)" readonly>
-                                            <input type="text" name="bp" id="interpretation" class="interpretation" readonly>
+                                            <input type="text" name="bp_interpretation" id="bp_interpretation" class="bp_interpretation" readonly>
                                         </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="pr">Pulse Rate:</label></td>
+                            <td><label for="pr">Pulse Rate (bpm)❤️:</label></td>
                             <td><input type="number" name="pr" id="pr"></td>
                         </tr>
                         <tr>
-                            <td><label for="rr">Respiratory Rate:</label></td>
+                            <td><label for="rr">Respiratory Rate(breaths/min)🫁:</label></td>
                             <td><input type="number" name="rr" id="rr"></td>
                         </tr>
                         <tr>
-                            <td><label for="oxygen">Oxygen Saturation (%):</label></td>
-                            <td><input type="number" name="oxygen" id="oxygen"></td>
+                            <td><label for="oxygen">Oxygen Saturation (%)🩻:</label></td>
+                            <td><input type="number" name="oxygen" id="oxygen" placeholder="SpO₂"></td>
                         </tr>
                         <tr>
                             <td><label for="weight">Weight (Kgs):</label></td>

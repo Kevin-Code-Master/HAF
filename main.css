@@ -152,7 +152,7 @@ table{
         width: 90%;
     }
     /* BP interpretation container */
-    .interpretation {
+    .bp_interpretation {
         display: none;
     }
     /* Normal BPs */
@@ -160,30 +160,35 @@ table{
         display: block;
         color: white;
         background-color: green;
+        margin-top: 1vh;
     }
     /* Elevated BPs */
     .elevated_bp {
         display: block;
         color: white;
         background-color: #ffa500;
+        margin-top: 1vh;
     }
     /* High BP Stage 1 */
     .high_bp1 {
         display: block;
         color: white;
         background-color: rgb(201, 132, 5);
+        margin-top: 1vh;
     }
     /* High BP Stage 2 */
     .high_bp2 {
         display: block;
         color: white;
         background-color: red;
+        margin-top: 1vh;
     }
       /* Hypertensive */
     .hypertensive_bp {
         display: block;
         color: white;
         background-color: darkred;
+        margin-top: 1vh;
     }
     
 label{

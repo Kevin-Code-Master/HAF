@@ -45,10 +45,7 @@ document.getElementById("height").addEventListener("input",calculateBMI);
 function calculatePressure() {
     let systoleReading = parseFloat(document.getElementById("systole").value);
     let diastoleReading = parseFloat(document.getElementById("diastole").value);
-    let bpInterpretation = document.getElementById("interpretation");
-
-    bpInterpretation.classList.add("interpretation");
-
+    let bp_interpretation = document.getElementById("bp_interpretation");
     let bp = document.getElementById("bp");
 
     if ((isNaN(systoleReading) || isNaN(diastoleReading)) || (systoleReading === "" || diastoleReading === "")) {
@@ -56,34 +53,35 @@ function calculatePressure() {
         return;
     };
     
-    if (systoleReading < 120 && diastoleReading < 80) {
+    if ((systoleReading >= 90 && systoleReading < 120) && (diastoleReading >= 60 && diastoleReading < 80)) {
         bp.value = `${systoleReading}/${diastoleReading} mmHg`;
 
-        bpInterpretation.value = "Normal BP✅";
-        bpInterpretation.classList.toggle("normal_bp");
+        bp_interpretation.value = "Normal BP✅";
+        bp_interpretation.classList.toggle("normal_bp");
         
-    }else if ((systoleReading >=120 && systoleReading <=129) && diastoleReading <= 80) {
+    }else if ((systoleReading >=120 && systoleReading <=129) && (diastoleReading >= 60 && diastoleReading < 80)) {
         bp.value = `${systoleReading}/${diastoleReading} mmHg`;
 
-        bpInterpretation.value = "Elevated BP ⚠️";
-        bpInterpretation.classList.toggle("elevated_bp");
+        bp_interpretation.value = "Elevated BP ⚠️";
+        bp_interpretation.classList.toggle("elevated_bp");
         
     }else if ((systoleReading >=130 && systoleReading <=139) || (diastoleReading >= 80 && diastoleReading <= 89)) {
+         bp.value = `${systoleReading}/${diastoleReading} mmHg`;
+
+         bp_interpretation.value = "High BP (Stage 1) ⚠️";
+         bp_interpretation.classList.toggle("high_bp1");
+    }else if ((systoleReading >=140 && systoleReading <= 180) || (diastoleReading >= 90 && diastoleReading <= 120)) {
         bp.value = `${systoleReading}/${diastoleReading} mmHg`;
 
-        bpInterpretation.classList.toggle("high_bp1");
-        bpInterpretation.value = "High BP (Stage 1) ⚠️";
-    }else if (systoleReading >=140 || diastoleReading >= 90) {
+        bp_interpretation.value = "High BP (Stage 2)❗";
+        bp_interpretation.classList.toggle("high_bp2");
+    }else if (systoleReading > 180 || diastoleReading > 120) {
         bp.value = `${systoleReading}/${diastoleReading} mmHg`;
 
-        bpInterpretation.classList.toggle("high_bp2");
-        bpInterpretation.value = "High BP (Stage 2)❗";
-    }else if (systoleReading >=180 || diastoleReading > 120) {
-        bp.value = `${systoleReading}/${diastoleReading} mmHg`;
-
-        bpInterpretation.classList.toggle("hypertensive");
-        bpInterpretation.value = "Hypertensive Crisis ‼️ Seek emergency care!";
+        bp_interpretation.value = "Hypertensive Crisis ‼️ Seek emergency care!";
+        bp_interpretation.classList.toggle("hypertensive_bp");
     };
 };
 document.getElementById("systole").addEventListener("input",calculatePressure);
 document.getElementById("diastole").addEventListener("input",calculatePressure);
+
